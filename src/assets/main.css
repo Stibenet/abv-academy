@@ -1,0 +1,1446 @@
+/* ===================== FONTS ===================== */
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik Spray Paint";
+  src: url("./fonts/RubikSprayPaint-Regular.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("@/assets/fonts/Manrope-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================== BASE ===================== */
+html, body, #app {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ===================== HEADER ===================== */
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 18px 0;
+  background: transparent;
+}
+
+.header__container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  width: 1055px;
+}
+
+.header__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header__link {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #1E1E1E;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header__link--active {
+  font-weight: 800;
+  color: #58008F;
+}
+
+.header__btn {
+  width: 166px;
+  height: 38px;
+  padding: 10px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #58008F;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.header__btn:hover {
+  opacity: 0.92;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  position: relative;
+  padding: 24px 0 40px;
+}
+
+.hero__inner {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Волна — без переполнения */
+.hero__wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -150px;
+  width: 100%;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+/* Карта */
+.hero__card {
+  position: relative;
+  width: 1534px;
+  height: 621px;
+  margin-left: 193px;
+  overflow: hidden;
+
+  -webkit-mask: var(--hero-mask) no-repeat 0 0 / 100% 100%;
+  mask: var(--hero-mask) no-repeat 0 0 / 100% 100%;
+}
+
+.hero__shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__brand {
+  position: absolute;
+  left: 110px;
+  top: 50px;
+  width: 136px;
+  height: 47px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero__title {
+  position: absolute;
+  left: 110px;
+  top: 120px;
+  width: 838px;
+  height: 225px;
+  margin: 0;
+
+  color: #fff;
+  font-family: "Rubik Spray Paint", system-ui, sans-serif;
+  font-size: 80px;
+  line-height: 75px;
+  letter-spacing: 0.04em;
+  z-index: 3;
+}
+
+.hero__subtitle-brush {
+  position: absolute;
+  left: 305px;
+  top: 272px;
+  width: 674.35px;
+  height: 166.36px;
+  transform: rotate(0deg);
+  transform-origin: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero__subtitle-text {
+  position: absolute;
+  left: 350px;
+  top: 350px;
+  width: 899px;
+  height: 30px;
+  transform: rotate(-2.36deg);
+  transform-origin: left center;
+
+  font-family: "Manrope", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 100%;
+  color: #fff;
+  z-index: 3;
+}
+
+.hero__btn {
+  position: absolute;
+  left: 110px;
+  top: 450px;
+  width: 366px;
+  height: 67px;
+
+  background: #F3E582;
+  border: none;
+  border-radius: 14px;
+  padding: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hero__btn-text {
+  position: absolute;
+  left: -18px;
+  top: 25px;
+  width: 400px;
+  height: 17px;
+
+  font-family: "Manrope", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+
+/* ===================== WELCOME ===================== */
+.welcome {
+  position: relative;
+  margin-top: 150px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.welcome__inner {
+  max-width: 1006px;
+  margin: 0 auto;
+}
+
+.welcome__title {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  margin: 16px auto 8px;
+}
+
+.welcome__title-accent {
+  color: #58008F;
+}
+
+.welcome__subtitle {
+  position: relative;
+  display: inline-block;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1E1E1E;
+
+  margin-bottom: 32px;
+}
+
+.welcome__subtitle-brush {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -40%);
+  width: 120%;
+  max-width: 1006px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.welcome__text {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #1E1E1E;
+
+  max-width: 1006px;
+  margin: 0;
+}
+
+/* ===================== WHY ===================== */
+.why {
+  position: relative;
+  padding: 80px 0;
+}
+
+.why__inner {
+  width: 1264px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.why__title {
+  margin: 0 0 35px;
+  text-align: center;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #1E1E1E;
+}
+
+.why__title-accent {
+  display: block;
+  position: relative;
+  top: -6px;
+  left: 270px;
+  font-weight: 800;
+  font-size: 29px;
+  line-height: 35px;
+  color: #58008F;
+}
+
+.why__wave {
+  position: absolute;
+  left: 50%;
+  top: 330px;
+  transform: translateX(-50%) translateX(-95px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why__grid {
+  position: relative;
+  z-index: 1;
+}
+
+.why__row {
+  display: flex;
+}
+
+.why__row--gap {
+  margin-top: 51px;
+}
+
+.why__card {
+  position: relative;
+  height: 386px;
+  border-radius: 20px;
+  background: #F3F3F3;
+  padding: 24px 24px 0 40px;
+  box-sizing: border-box;
+  overflow: visible;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.why__card--left { width: 406px; margin-right: 22px; }
+.why__card--mid  { width: 407px; margin-right: 23px; }
+.why__card--right{ width: 406px; }
+
+.why__icon {
+  position: absolute;
+  left: calc(50% + var(--x, 0px));
+  top: calc(10px + var(--y, 0px));
+  transform: translateX(-50%);
+  width: var(--w, 240px);
+  height: auto;
+  pointer-events: none;
+}
+
+.why__icon--1 { --w: 270px; --y: -42px; --x: 70px; }
+.why__icon--2 { --w: 260px; --y: -50px; --x: 70px; }
+.why__icon--3 { --w: 260px; --y: -44px; --x: 70px; }
+.why__icon--4 { --w: 265px; --y: -38px; --x: 70px; }
+.why__icon--5 { --w: 260px; --y: -45px; --x: 70px; }
+.why__icon--6 { --w: 250px; --y: -46px; --x: 70px; }
+
+.why__card-text {
+  margin: 0;
+  margin-top: auto;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #1E1E1E;
+}
+
+.why__bottom {
+  margin-top: 44px;
+  width: 100%;
+  height: 211px;
+  border-radius: 20px;
+  background: #F3F3F3;
+
+  padding: 32px 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.why__bottom-text {
+  margin: 0;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #1E1E1E;
+  max-width: 820px;
+}
+
+.why__bottom-icon {
+  position: absolute;
+  right: calc(40px + var(--bx, 0px));
+  top: calc(50% + var(--by, 0px));
+  transform: translateY(-50%);
+  width: var(--bw, 150px);
+  pointer-events: none;
+}
+
+.why__bottom-icon--tutor {
+  --bw: 240px;
+  --bx: 20px;
+  --by: 410px;
+}
+
+.why__row:first-of-type .why__card { padding-bottom: 60px; }
+.why__row--gap .why__card { padding-bottom: 40px; }
+
+/* ===================== SIGNUP ===================== */
+.signup {
+  padding: 60px 0;
+}
+
+.signup__inner {
+  width: 1264px;
+  margin: 0 auto;
+}
+
+.signup__card {
+  width: 1264px;
+  height: 395px;
+  background: #58008F;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px 0 49px;
+  box-sizing: border-box;
+}
+
+.signup__text {
+  max-width: 520px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.signup__form {
+  width: 445px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.signup__input {
+  width: 445px;
+  height: 73px;
+  border-radius: 30px;
+  background: #F2F2F2;
+  border: none;
+  outline: none;
+
+  padding: 0 26px;
+  box-sizing: border-box;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #1E1E1E;
+}
+
+.signup__input::placeholder {
+  color: #B1B1B1;
+}
+
+.signup__btn {
+  width: 262px;
+  height: 67px;
+  border-radius: 20px;
+  background: #F3E582;
+  border: none;
+  cursor: pointer;
+
+  align-self: center;
+  margin-top: 20px;
+
+  font-family: "Manrope", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #232323;
+}
+
+/* ===================== FOOTER ===================== */
+/* Важно: фон футера делается через footer-shell (в HomePage.vue), поэтому тут — только контент */
+.footer {
+  width: 100%;
+  padding: 55px 0 40px;
+  position: relative;
+}
+
+.footer__container {
+  width: 1120px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.footer__col {
+  max-width: 360px;
+}
+
+.footer__title {
+  margin: 0 0 18px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #FFFFFF;
+}
+
+.footer__title--small {
+  font-size: 20px;
+}
+
+.footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__list li {
+  margin-bottom: 10px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #E2E2E2;
+}
+
+.footer__text {
+  margin: 0 0 10px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #E2E2E2;
+}
+
+.footer__bottom {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer__logo {
+  width: 55px;
+  height: 51px;
+  flex: 0 0 auto;
+}
+
+.footer__license {
+  margin: 0;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #E2E2E2;
+}
+
+  /* ===== MOBILE OVERRIDE (FIX WHITE SCREEN < 768px) ===== */
+  @media (max-width: 800px) {
+
+    /* убираем абсолютный холст */
+    .stage-wrap,
+    .footer-wrap {
+      position: relative !important;
+      left: 0 !important;
+      transform: none !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    /* отключаем scale */
+    .app-stage,
+    .footer-stage {
+      position: relative !important;
+      width: 100% !important;
+      transform: none !important;
+    }
+
+    /* spacer больше не нужен */
+    .app-spacer {
+      display: none !important;
+    }
+
+    /* футер становится обычным блоком */
+    .footer-shell {
+      position: relative !important;
+      top: 0 !important;
+      height: auto !important;
+    }
+  }
+
+@media (max-width: 800px) {
+
+  /* универсально: все секции пусть не выходят за экран */
+  img { max-width: 100%; height: auto; }
+
+  .header__container,
+  .welcome__inner,
+  .why__inner,
+  .signup__inner,
+  .footer__container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+  }
+
+  /* HERO */
+  .hero__inner { max-width: 100% !important; }
+  .hero__card {
+    width: 100% !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    border-radius: 20px;
+  }
+  .hero__title {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    font-size: 44px !important;
+    line-height: 1.05 !important;
+    padding: 24px 16px 0 !important;
+  }
+  .hero__boy { display: none !important; } /* иначе обычно ломает всё */
+
+  /* WHY: сетку в колонку */
+  .why__row { flex-direction: column !important; gap: 16px !important; }
+  .why__card,
+  .why__card--left,
+  .why__card--mid,
+  .why__card--right {
+    width: 100% !important;
+    margin-right: 0 !important;
+  }
+
+  /* SIGNUP: в колонку */
+  .signup__card {
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    padding: 24px 16px !important;
+  }
+  .signup__form,
+  .signup__input {
+    width: 100% !important;
+  }
+
+  /* footer: колонки в колонку */
+  .footer__inner {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  .footer__bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+/* ===================== HERO MOBILE ===================== */
+/* показываем мобилку только на узких */
+.hero--mobile { display: none; }
+@media (max-width: 800px) {
+  .hero--desktop { display: none; }
+  .hero--mobile { display: block; }
+}
+
+/* контейнер моб-хиро: 360x420, но адаптируется */
+.hero-mob{
+  position: relative;
+  width: min(360px, calc(100vw - 32px));
+  aspect-ratio: 360 / 420;
+  margin: 16px auto 0;
+}
+
+/* фиолетовая форма */
+.hero-mob__shape{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* a->A */
+.hero-mob__brand{
+  position: absolute;
+  left: 22px;
+  top: 18px;
+  width: 56px;      /* можно чуть подогнать */
+  height: auto;
+}
+
+/* заголовок */
+.hero-mob__title{
+  position: absolute;
+  left: 22px;
+  top: 56px;
+  margin: 0;
+
+  font-family: "Rubik Spray Paint", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 29.02px;
+  line-height: 1.05;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+/* подзаголовок + мазок */
+.hero-mob__subtitle{
+  position: absolute;
+  left: 84px;
+  top: 170px;
+  width: 250px;
+  height: 26px;
+  transform: rotate(2.36deg);
+  transform-origin: left center;
+}
+
+.hero-mob__brush{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform: rotate(16.17deg); /* как ты указал */
+  transform-origin: left center;
+  pointer-events: none;
+}
+
+.hero-mob__subtitle-text{
+  position: absolute;
+  left: 14px;
+  top: 6px;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 8.93px;
+  line-height: 1;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* мальчик */
+.hero-mob__boy{
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  width: 150px;  /* если надо — подгони */
+  height: auto;
+}
+
+/* кнопка */
+.hero-mob__btn{
+  position: absolute;
+  left: 22px;
+  bottom: 18px;
+
+  width: 143px;
+  height: 26.54px;
+  border-radius: 10px;
+  border: 0;
+  background: #F3E582;
+  cursor: pointer;
+
+  font-family: "Manrope", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 6.64px;
+  color: #232323;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* ===================== HEADER MOBILE (nice) ===================== */
+@media (max-width: 800px) {
+  .header {
+    padding: 10px 0 6px;
+  }
+
+  .header__container {
+    max-width: 100%;
+    padding: 0 12px;
+
+    display: grid;
+    grid-template-columns: 1fr auto; /* слева меню, справа кнопка */
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* кнопка справа сверху */
+  .header__btn {
+    width: auto;
+    height: 34px;
+    padding: 0 14px;
+    border-radius: 12px;
+
+    font-size: 13px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  /* меню в виде “чипсов” */
+  .header__nav {
+    width: 100%;
+    min-width: 0; /* важно для grid */
+  }
+
+  .header__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    overflow-x: auto;             /* 🔥 горизонтальный скролл */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;        /* Firefox */
+  }
+  .header__list::-webkit-scrollbar { display: none; }
+
+  .header__link {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 12px;
+
+    border-radius: 999px;
+    background: #F3F3F3;
+
+    font-size: 13px;
+    line-height: 16px;
+    white-space: nowrap;
+  }
+
+  .header__link--active {
+    background: rgba(88, 0, 143, 0.12);
+    color: #58008F;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__nav {
+    position: relative;
+  }
+
+  .header__nav::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 100%;
+    pointer-events: none;
+
+    background: linear-gradient(
+            to left,
+            #ffffff 0%,
+            rgba(255,255,255,0) 100%
+    );
+  }
+}
+
+@media (max-width: 800px) {
+  .welcome,
+  .welcome-section,
+  .section--welcome {
+    margin-top: 24px !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* ===== MOBILE HERO BRUSH ===== */
+@media (max-width: 800px) {
+  .hero__subtitle-brush {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 6px auto 0;
+  }
+
+  .hero__subtitle-brush img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* если нужно уменьшить отступ до текста ниже */
+  .hero__subtitle-text {
+    margin-top: -12px;
+  }
+}
+
+.welcome__subtitle{
+  position: relative;
+  display: inline-block;
+  padding: 6px 10px;
+}
+
+.welcome__subtitle-brush{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  width: 140%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.welcome__subtitle-brush img{
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: rotate(2deg);
+}
+
+.welcome__subtitle-text{
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================== WHY (MOBILE) ===================== */
+@media (max-width: 800px) {
+  .why {
+    padding: 40px 0;
+  }
+
+  .why__inner {
+    width: min(360px, calc(100% - 32px));
+    margin: 0 auto;
+  }
+
+  /* Заголовок + фиолетовое "нашу школу" по центру */
+  .why__title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 24px;
+  }
+
+  .why__title-accent {
+    position: static;      /* убираем смещения left/top */
+    display: block;
+    margin-top: 6px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  /* Волна (если мешает — можно скрыть) */
+  .why__wave {
+    display: none;
+  }
+
+  /* Ряды -> в колонку */
+  .why__row {
+    flex-direction: column;
+    gap: 22px;             /* побольше воздуха между кубами */
+  }
+
+  .why__row--gap {
+    margin-top: 22px;
+  }
+
+  /* Карточки: 360px по ширине, высота авто */
+  .why__card,
+  .why__card--left,
+  .why__card--mid,
+  .why__card--right {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    padding: 170px 20px 22px;  /* верхний отступ под "вылезающую" картинку */
+    border-radius: 20px;
+  }
+
+  /* Иконки над карточками: уменьшаем + поднимаем */
+  .why__icon {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    width: 240px;
+  }
+
+  /* Если какие-то иконки слишком большие — можно чуть поджать точечно */
+  .why__icon--1,
+  .why__icon--2,
+  .why__icon--3,
+  .why__icon--4,
+  .why__icon--5,
+  .why__icon--6 {
+    --x: 0px;
+    --y: -20px;
+    --w: 240px;
+  }
+
+  .why__card-text {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  /* Нижний блок -> тоже "куб", а не широкий прямоугольник */
+  .why__bottom {
+    margin-top: 22px;
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+    padding: 170px 20px 22px;
+    border-radius: 20px;
+    display: block;        /* убираем горизонтальный флекс */
+    position: relative;
+  }
+
+  .why__bottom-text {
+    font-size: 18px;
+    line-height: 1.2;
+    max-width: none;
+  }
+
+  /* Нижняя картинка: возвращаем внутрь куба и ставим сверху по центру */
+  .why__bottom-icon {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    right: auto;
+    transform: translateX(-50%);
+    width: 240px;
+  }
+
+  .why__bottom-icon--tutor {
+    --bw: 240px;
+    --bx: 0px;
+    --by: 0px;
+  }
+}
+
+
+/* ===================== WHY (MOBILE) ===================== */
+@media (max-width: 800px) {
+  .why {
+    padding: 40px 0;
+  }
+
+  .why__inner {
+    width: 360px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+  }
+
+  /* заголовок */
+  .why__title {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 0 0 16px;
+  }
+
+  /* "нашу школу" — по центру и без сдвигов */
+  .why__title-accent {
+    position: static;
+    left: auto;
+    top: auto;
+    display: block;
+    margin-top: 6px;
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  /* волна на мобилке обычно только мешает */
+  .why__wave {
+    display: none;
+  }
+
+  /* ряды в колонку + нормальные расстояния */
+  .why__row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .why__row--gap {
+    margin-top: 24px;
+  }
+
+  /* карточки: ширина 100%, высота авто, сверху место под картинку */
+  .why__card {
+    width: 100% !important;
+    height: auto;
+    min-height: 220px;
+
+    padding: 180px 20px 24px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* иконка: меньше и всегда по центру */
+  .why__icon {
+    width: 180px !important;
+    left: 50% !important;
+    top: 20px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  /* сброс индивидуальных подгонок на мобилке */
+  .why__icon--1,
+  .why__icon--2,
+  .why__icon--3,
+  .why__icon--4,
+  .why__icon--5,
+  .why__icon--6 {
+    --w: 180px;
+    --x: 0px;
+    --y: 0px;
+  }
+
+  /* текст в карточках */
+  .why__card-text {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  /* нижний блок делаем как "куб" */
+  .why__bottom {
+    width: 100%;
+    height: auto;
+
+    margin-top: 24px;
+    padding: 180px 20px 24px;
+    border-radius: 20px;
+
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why__bottom-text {
+    font-size: 18px;
+    line-height: 1.25;
+    max-width: none;
+  }
+
+  /* нижняя иконка — по центру и меньше */
+  .why__bottom-icon {
+    position: absolute;
+    left: 50% !important;
+    right: auto !important;
+    top: 24px !important;
+    transform: translateX(0%) !important;
+
+    width: 150px !important;
+  }
+
+  .why__bottom-icon--tutor {
+    --bw: 200px;
+    --bx: 0px;
+    --by: 0px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  /* все обычные карточки */
+  .why__icon {
+    left: calc(50% + 100px) !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .signup__text {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 500;
+  }
+
+  .signup__text-main {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .signup__text-sub {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+  }
+}
+
+/* ===== ПЕРЕКЛЮЧЕНИЕ ФУТЕРА ===== */
+.footer__mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .footer__inner {
+    display: none;
+  }
+
+  .footer__mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .footer__accordion {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .footer__accordion summary {
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 24px;
+  }
+
+  .footer__accordion summary::after {
+    content: "▾";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+  }
+
+  .footer__accordion[open] summary::after {
+    transform: rotate(180deg);
+  }
+
+  .footer__list {
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .footer__list li {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+html, body, #app { overflow-x: hidden; }
+
+
+/* ===== MOBILE HEADER + DRAWER ===== */
+
+/* бургер скрыт на десктопе */
+.header__burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.header__burger-lines {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #1E1E1E;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.header__burger-lines::before,
+.header__burger-lines::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #1E1E1E;
+  border-radius: 2px;
+}
+.header__burger-lines::before { top: -7px; }
+.header__burger-lines::after  { top:  7px; }
+
+/* Drawer overlay */
+.mnav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+  z-index: 999;
+}
+.mnav-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Drawer */
+.mnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: min(82vw, 320px);
+  background: #fff;
+  transform: translateX(-105%);
+  transition: transform .22s ease;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+}
+.mnav.is-open {
+  transform: translateX(0);
+}
+
+.mnav__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+.mnav__title {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #1E1E1E;
+}
+.mnav__close {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #1E1E1E;
+}
+
+.mnav__body {
+  padding: 10px 10px 14px;
+  overflow: auto; /* скролл внутри меню */
+}
+.mnav__link {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-decoration: none;
+
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1E1E1E;
+}
+.mnav__link:hover {
+  background: #F3F3F3;
+}
+.mnav__link--active {
+  color: #58008F;
+  background: rgba(88,0,143,.08);
+}
+
+/* Адаптация шапки под мобилку */
+@media (max-width: 800px) {
+  .header__container--mobile {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .header__nav--desktop {
+    display: none; /* убираем горизонтальный скролл */
+  }
+
+  .header__burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__btn {
+    margin-left: auto;
+    width: auto;
+    padding: 10px 12px;
+    height: 38px;
+    border-radius: 12px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
+
+
+
