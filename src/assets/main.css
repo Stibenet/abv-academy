@@ -1442,5 +1442,24 @@ html, body, #app { overflow-x: hidden; }
   }
 }
 
+/* ===== HARD DESKTOP DEFAULT (важно!) ===== */
+.header__nav--desktop { display: block; }
+.header__burger { display: none !important; }
+
+/* мобильный drawer вообще не показываем на десктопе */
+.mnav,
+.mnav-overlay { display: none; }
+
+/* ===== MOBILE ONLY ===== */
+@media (max-width: 800px) {
+  .header__nav--desktop { display: none; }
+  .header__burger { display: inline-flex !important; }
+
+  .mnav,
+  .mnav-overlay { display: block; }
+
+  .mnav { display: flex; } /* чтобы flex работал */
+}
+
 
 

@@ -4,9 +4,11 @@ import { ref, onBeforeUnmount } from 'vue'
 const isMenuOpen = ref(false)
 
 function openMenu() {
+  if (!window.matchMedia('(max-width: 800px)').matches) return;
   isMenuOpen.value = true
   document.documentElement.style.overflow = 'hidden'
 }
+
 
 function closeMenu() {
   isMenuOpen.value = false

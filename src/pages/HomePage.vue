@@ -31,10 +31,19 @@ function recalc() {
     return
   }
 
-  // DESKTOP SCALE MODE
+// DESKTOP SCALE MODE
   let raw = vw >= BASE_W ? 1 : vw / BASE_W
+
   const dpr = window.devicePixelRatio || 1
-  raw = Math.round(raw * dpr) / dpr
+
+// анти-блюр только когда dpr >= 1 (при zoom-out dpr может стать < 1)
+  if (dpr >= 1) {
+    raw = Math.round(raw * dpr) / dpr
+  }
+
+// защита от исчезновения страницы
+  raw = Math.max(0.1, raw)
+
   scale.value = raw
 
   requestAnimationFrame(() => {
