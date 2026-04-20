@@ -3,7 +3,7 @@ import yugraLogo from '@/assets/footer/footer-yugra-logo.svg'
 </script>
 
 <template>
-  <div class="footer-wrap">
+  <div class="footer-shell">
     <footer class="footer">
       <div class="footer__container">
 
@@ -74,6 +74,10 @@ import yugraLogo from '@/assets/footer/footer-yugra-logo.svg'
 <style scoped>
 .footer__mobile { display: none; }
 .footer__desktop { display: flex; }
+.footer-shell {
+  background: #2b2b2b; /* тёмная подложка */
+  width: 100%;
+}
 
 @media (max-width: 800px) {
   .footer__desktop { display: none; }

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onBeforeUnmount } from 'vue'
+import {ref, onBeforeUnmount} from 'vue'
 
 const isMenuOpen = ref(false)
 
@@ -38,9 +38,19 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       <!-- Десктоп-меню (как у тебя было) -->
       <nav class="header__nav header__nav--desktop" aria-label="Главное меню">
         <ul class="header__list">
-          <li><a class="header__link header__link--active" href="#">Главная</a></li>
+          <li>
+            <router-link class="header__link" to="/">
+              Главная
+            </router-link>
+          </li>
+<!--          <li><a class="header__link header__link&#45;&#45;active" href="#">Главная</a></li>-->
           <li><a class="header__link" href="#">Новости</a></li>
-          <li><a class="header__link" href="#">Сведения об образовательной организации</a></li>
+          <li>
+            <a class="header__link" href="/info">
+              Сведения об образовательной организации
+            </a>
+          </li>
+<!--          <li><a class="header__link" href="#">Сведения об образовательной организации</a></li>-->
           <li><a class="header__link" href="#">Фотогалерея</a></li>
           <li><a class="header__link" href="#">Странички педагогов</a></li>
           <li><a class="header__link" href="#">Контакты</a></li>
@@ -69,9 +79,15 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
       </div>
 
       <nav class="mnav__body">
-        <a class="mnav__link mnav__link--active" href="#" @click="closeMenu">Главная</a>
+        <router-link class="mnav__link" to="/" @click="closeMenu">
+          Главная
+        </router-link>
+<!--        <a class="mnav__link mnav__link&#45;&#45;active" href="#" @click="closeMenu">Главная</a>-->
         <a class="mnav__link" href="#" @click="closeMenu">Новости</a>
-        <a class="mnav__link" href="#" @click="closeMenu">Сведения об образовательной организации</a>
+        <a class="mnav__link" href="/info" @click="closeMenu">
+          Сведения об образовательной организации
+        </a>
+        <!--        <a class="mnav__link" href="#" @click="closeMenu">Сведения об образовательной организации</a>-->
         <a class="mnav__link" href="#" @click="closeMenu">Фотогалерея</a>
         <a class="mnav__link" href="#" @click="closeMenu">Странички педагогов</a>
         <a class="mnav__link" href="#" @click="closeMenu">Контакты</a>

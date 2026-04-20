@@ -1,9 +1,6 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount, nextTick } from "vue";
 
-import Header from "@/components/layout/Header.vue";
-import Footer from "@/components/layout/Footer.vue";
-
 import HeroSection from "@/components/home/HeroSection.vue";
 import WelcomeSection from "@/components/home/WelcomeSection.vue";
 import WhyChooseSection from "@/components/home/WhyChooseSection.vue";
@@ -87,7 +84,6 @@ onBeforeUnmount(() => {
           class="app-stage"
           :style="{ transform: `scale(${scale})` }"
       >
-        <Header />
         <HeroSection />
         <WelcomeSection />
         <WhyChooseSection />
@@ -106,7 +102,6 @@ onBeforeUnmount(() => {
             class="footer-stage"
             :style="{ transform: `scale(${scale})` }"
         >
-          <Footer />
         </div>
       </div>
     </footer>
