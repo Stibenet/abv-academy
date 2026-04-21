@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const file = {
-  name: 'DOOP_Erudit_2025-2026_PFDO.pdf',
+  name: 'Дополнительная общеобразовательная общеразвивающая программа "Эрудит',
   url: '/files/DOOP_Erudit_2025-2026_PFDO.pdf'
 }
 </script>
@@ -10,17 +10,14 @@ const file = {
     <h1>Документы</h1>
 
     <div class="file-card">
-      <div class="file-info">
-        <span class="file-name">{{ file.name }}</span>
-      </div>
+      <span class="file-name">{{ file.name }}</span>
 
       <a
           :href="file.url"
-          target="_blank"
-          rel="noopener noreferrer"
+          :download="file.name"
           class="file-link"
       >
-        Открыть файл
+        Скачать файл
       </a>
     </div>
   </div>
@@ -29,35 +26,28 @@ const file = {
 <style scoped>
 .page {
   padding: 24px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .file-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 16px;
-  margin-top: 16px;
-  background: #fff;
 }
 
 .file-name {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .file-link {
-  background: #2c7be5;
-  color: white;
-  padding: 8px 14px;
+  display: inline-block;
+  padding: 10px 14px;
   border-radius: 8px;
   text-decoration: none;
-  transition: 0.2s;
-}
-
-.file-link:hover {
-  background: #1a68d1;
+  color: white;
+  background: #2c7be5;
 }
 </style>
